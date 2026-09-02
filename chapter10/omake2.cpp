@@ -1,14 +1,19 @@
 #include <iostream>
 #include <string>
 
-std::string& getName(){
-    static std::string name = "Alice";
-    return name;
+struct Person{
+    std::string name;
+    int age;
+};
+
+Person& getName(){
+    static Person person{"Alice", 30};
+    return person;
 }
 
 int main(){
-    std::string name{"Bob"};
-    std::cout<<"Before assignment: " << getName() << std::endl;
-    getName() = name;
-    std::cout<<"After assignment: " << getName() << std::endl;
+    Person p{"Bob", 25};
+    std::cout<<"Before assignment: " << getName().name << ", " << getName().age << std::endl;
+    getName() = p;
+    std::cout<<"After assignment: " << getName().name << ", " << getName().age << std::endl;
 }
