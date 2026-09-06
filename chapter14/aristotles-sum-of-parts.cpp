@@ -6,4 +6,6 @@ int main()
     char char1 = 1;
     char char2 = 2;
     std::cout<<std::is_same_v<decltype(char1 + char2), char>;
+    std::cout<<std::is_same_v<decltype(char1 + char2), int>;
+    std::cout<<std::is_same_v<decltype(char1 + char2), unsigned int>;
 }
