@@ -18,5 +18,9 @@ int main()
 {
     Container c1(1,2);
     Container c2{1,2};
+
+    // おまけ
+    int a=1,b=2;
+    Container c3{a,b};
     return 0;
 }
