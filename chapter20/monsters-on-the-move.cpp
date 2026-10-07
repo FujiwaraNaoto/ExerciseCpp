@@ -15,7 +15,7 @@ struct Jormungandr: public Monster{
     Jormungandr(const Jormungandr& other):Monster(other){
         std::cout<<"Jormungandr copied\n";
     }
-    Jormungandr(const Jormungandr&& other):Monster(other){
+    Jormungandr(Jormungandr&& other):Monster(other){
         std::cout<<"Jormungandr moved\n";
     }
 };
