@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 
 template<typename T>
 void serialize(T&){
@@ -16,6 +17,6 @@ void serialize(const std::string&){
 
 int main(){
     std::string hello_world{"Hello,world!"};
-    serialize(hello_world);
-    serialize(std::string{"Goodbye,world!"});
+    serialize(hello_world); //左辺値の場合
+    serialize(std::string{"Goodbye,world!"}); //右辺値の場合
 }
